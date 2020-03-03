@@ -1,0 +1,46 @@
+<!-- <script type='text/javascript' src='../build/output/knockout-latest.js'></script> -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+    
+    <p>First name: <input cladata-bind="value: firstName, valueUpdate: 'afterKeyDown'" /></p>
+    <p>Last name: <input data-bind="value: lastName, valueUpdate: 'afterKeyDown'" /></p>
+    <h2>Hello, <span data-bind="text: fullName"> </span></h2>
+
+
+    <button class="btn btn-primary" data-bind="click: increaseNumber, disable: limitClick">Count</button>
+    </br></br></br></br>
+
+    <form>
+        <div class="row">
+            <label class="col-md-1">Add food:</label>
+            <input class="form-control col-md-3" data-bind="value: newFood, valueUpdate:'afterKeyDown'">
+            <button class="btn btn-primary" data-bind="click: addNewFood">Add</button>
+            <button class="btn btn-default" data-bind="click: removeFood">Remove</button>
+        </div>
+        <div class="row">
+            <select class="form-control col-md-6" multiple="multiple"
+                data-bind="options: lstFood, selectedOptions: selectedFood"></select>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary" data-bind="click: sortFood">Sort</button>
+        </div>
+        <!-- <button data-bind="enable: newFood().length > 0">Add</button> -->
+    </form>
+
+
+</body>
+
+</html>
+<script type='text/javascript' src='jquery.min.js'></script>
+<script type='text/javascript' src='knockout-3.5.1.js'></script>
+<script type='text/javascript' src='bootstrap.min.js'></script>
+<script type='text/javascript' src='bootstrap.min.'></script>
+
+
+<script type='text/javascript' src='main.js'></script>
