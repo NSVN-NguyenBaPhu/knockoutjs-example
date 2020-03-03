@@ -8,7 +8,6 @@
 
 <body>
     <h2>Customer</h2>
-    <button class="btn btn-primary" data-bind="click: addCus">Add</button>
     <table class="table">
         <thead>
             <tr>
@@ -25,7 +24,23 @@
             </tr>
         </tbody>
     </table>
-
+    <form>
+        <button class="btn btn-primary" data-bind="click: addCus">Add</button>
+        <button class="btn btn-primary" data-bind="click: removeCus">Remove</button>
+        <div class="row">
+            <label class="col-md-2">ID:</label>
+            <input class="form-control col-md-3" disabled data-bind="value: customer.id, valueUpdate:'afterKeyDown'">
+        </div>
+        <div class="row">
+            <label class="col-md-2">Name:</label>
+            <input class="form-control col-md-3" required data-bind="value: customer.name, valueUpdate:'afterKeyDown'">
+        </div>
+        <div class="row">
+            <label class="col-md-2">Address:</label>
+            <input class="form-control col-md-3" data-bind="value: customer.address, valueUpdate:'afterKeyDown'">
+        </div>
+    </form>
+    
 </body>
 
 </html>
